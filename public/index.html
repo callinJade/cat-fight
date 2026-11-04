@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang=“en-us”>
+	<head>
+		<!-- Meta Information -->
+		<title>Ready, Set, Fight!</title>
+		<link rel=stylesheet type="text/css" href="./styles/style.css">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="./actions.js" type="text/javascript" defer></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+		<header>
+			<h1>Ready, Set, Fight!</h1>
+		</header>
+
+		<div id="game-container">
+
+			
+			
+
+			
+			<div id="player-2-area" class="player-area">
+				<!-- player 2 box -->
+				 <div id="player-2-elements">
+					<div id="player-2-health" class="health-bar">
+						<div id="player-2-health-fill" class="health-fill">
+	 
+						</div>
+						<!-- number on far right end that displays current health (goes down by same # as fill bar lessens by)-->
+						 <p id="player-2-health-text" class="health-text">100</p>
+					 </div>
+					<img id="player-2-image" class="character-image" src="./images/siamese cat.jpg" alt="Player 2 Character Image">
+					<!-- header below image saying player 2-->
+					<h2>Player 2</h2>
+				 </div>
+				
+				
+			</div>
+
+			<div id="player-1-area" class="player-area">
+				<!-- player 1 box -->
+				<div id="player-1-elements">
+					<div id="player-1-health" class="health-bar">
+						<div id="player-1-health-fill" class="health-fill">
+	
+						</div>
+						<!-- number on far right end that displays current health (goes down by same # as fill bar lessens by)-->
+						 <p id="player-1-health-text" class="health-text">100</p>
+					 </div>
+					 <img id="player-1-image" class="character-image" src="./images/calico cat.jpg" alt="Player 1 Character Image">
+					 <!-- header below image saying player 1-->
+					 <h2>Player 1</h2>
+				</div>
+				
+				 
+			</div>
+
+			<div id="information-box">
+				<div id="turn-indicator">
+					 <h1 id="turn-text">Game Start</h1>
+					 <div id="setup-menu">
+						<div class="player-config">
+							<p>Player 1 Color:</p>
+							<div class="color-options" data-player="p1">
+								<button type="button" class="color-btn" data-color="#D7C4F0" style="background-color: #D7C4F0;"></button>
+								<button type="button" class="color-btn" data-color="#7AD5F0" style="background-color: #7AD5F0;"></button>
+								<button type="button" class="color-btn" data-color="#30F038" style="background-color: #30F038;"></button>
+							</div>
+						</div>
+						<div class="player-config">
+							<p>Player 2 Color:</p>
+							<div class="color-options" data-player="p2">
+								<button type="button" class="color-btn" data-color="#faea39" style="background-color: #faea39;"></button>
+								<button type="button" class="color-btn" data-color="#FEC165" style="background-color: #FEC165;"></button>
+								<button type="button" class="color-btn" data-color="#F4BFBD" style="background-color: #F4BFBD;"></button>
+							</div>
+						</div>
+					</div>
+					 <div id="start-buttons">
+						<button id="start">Start</button>
+						<button id="play-again" class="hidden">Play Again</button>
+					 </div>
+				</div>
+				<div id="action-menu" class="hidden">
+					<!-- action menu -->
+					<button id="attack">Attack (2-20 hp)</button>
+					<button id="block">Block (0-10 hp)</button>
+					<button id="heal">Heal (5 hp)</button>
+				</div>
+				<div id="action-log">
+					<!-- action log -->
+				</div>
+			</div>
+			
+
+
+		</div>
+			
+			
+		
+
+		
+ 	</body>
+</html>
